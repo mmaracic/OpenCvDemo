@@ -21,8 +21,12 @@ public class OpenCvMain{
         // load the native OpenCV library
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
         
-        String fileName = ClassLoader.getSystemClassLoader().getResource("lena.png").getFile();
-        Mat img = Imgcodecs.imread(fileName, CV_LOAD_IMAGE_COLOR);
+        //substring 1 to remove leading "/"
+        String fileName = ClassLoader.getSystemClassLoader().getResource("lena.png").getFile().substring(1);
+        Mat img = Imgcodecs.imread(fileName);
+        if (img.width() == 0 && img.height() ==0){
+            throw new IllegalArgumentException("Incorrect path, dimensions of the image are 0");
+        }
         Image javaImg = Util.toBufferedImage(img);
         Util.displayImage(javaImg);
     }

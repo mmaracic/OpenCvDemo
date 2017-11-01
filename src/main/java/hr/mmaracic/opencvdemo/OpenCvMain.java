@@ -5,6 +5,8 @@
  */
 package hr.mmaracic.opencvdemo;
 
+import java.awt.Color;
+import java.awt.Graphics;
 import java.awt.Image;
 import org.opencv.core.Core;
 import org.opencv.core.Mat;
@@ -27,8 +29,11 @@ public class OpenCvMain{
         if (img.width() == 0 && img.height() ==0){
             throw new IllegalArgumentException("Incorrect path, dimensions of the image are 0");
         }
-        Image javaImg = Util.toBufferedImage(img);
-        Util.displayImage(javaImg);
+        Image i = Util.toBufferedImage(img);
+        Graphics g = i.getGraphics();
+        g.setColor(Color.red);
+        g.drawOval(i.getWidth(null)/2, i.getHeight(null)/2, 10, 10);
+        Util.displayImage(i);
     }
 
 }

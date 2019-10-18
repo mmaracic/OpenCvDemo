@@ -11,7 +11,6 @@ import java.awt.Image;
 import org.opencv.core.Core;
 import org.opencv.core.Mat;
 import org.opencv.imgcodecs.Imgcodecs;
-import static org.opencv.imgcodecs.Imgcodecs.CV_LOAD_IMAGE_COLOR;
 
 /**
  *

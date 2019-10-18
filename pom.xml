@@ -15,7 +15,7 @@
         <dependency>
             <groupId>opencv</groupId>
             <artifactId>opencv</artifactId>
-            <version>330</version>
+            <version>410</version>
         </dependency>
     </dependencies>
     

@@ -32,7 +32,7 @@ public class OpenCvMain{
         Graphics g = i.getGraphics();
         g.setColor(Color.red);
         g.drawOval(i.getWidth(null)/2, i.getHeight(null)/2, 10, 10);
-        Util.displayImage(i);
+        Util.displayImage(i, "Lena image");
     }
 
 }

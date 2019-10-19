@@ -35,9 +35,9 @@ public class Util {
         return image;
     }
 
-    public static void displayImage(Image img) {
+    public static void displayImage(Image img, String title) {
         ImageIcon icon = new ImageIcon(img);
-        JFrame frame = new JFrame();
+        JFrame frame = new JFrame(title);
         frame.setLayout(new FlowLayout());
         frame.setSize(img.getWidth(null) + 50, img.getHeight(null) + 50);
         JLabel lbl = new JLabel();
